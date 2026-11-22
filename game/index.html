@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shadow Vault — a one-person heist</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="stage">
+  <canvas id="world" width="1280" height="800"></canvas>
+
+  <div id="hud">
+    <div id="brand">
+      <div class="mark">SV</div>
+      <div>
+        <div class="title">SHADOW VAULT</div>
+        <div class="sub">A ONE-PERSON HEIST &nbsp;/&nbsp; NIGHT SHIFT 04</div>
+      </div>
+    </div>
+
+    <div id="objective">
+      <span class="step" id="step1">01 INFILTRATE</span>
+      <span class="arrow">›</span>
+      <span class="step" id="step2">02 PICK THE VAULT</span>
+      <span class="arrow">›</span>
+      <span class="step" id="step3">03 TAKE THE GEM</span>
+      <span class="arrow">›</span>
+      <span class="step" id="step4">04 GETAWAY</span>
+    </div>
+
+    <div id="alarm-box">
+      <div class="alarm-label"><span>ALARM</span><span id="alarm-num">08%</span></div>
+      <div class="alarm-track"><div id="alarm-fill"></div></div>
+      <div class="alarm-state" id="alarm-state">CLEAR</div>
+    </div>
+
+    <div id="credits">CREDITS <b id="credit-num">6</b></div>
+
+    <div id="tools">
+      <div class="tool" id="tool1"><kbd>1</kbd><span class="tool-name">DECOY</span><span class="tool-cost">1 CR</span><span class="tool-count" id="count1">×3</span></div>
+      <div class="tool" id="tool2"><kbd>2</kbd><span class="tool-name">SMOKE</span><span class="tool-cost">2 CR</span><span class="tool-count" id="count2">×2</span></div>
+      <div class="tool" id="tool3"><kbd>3</kbd><span class="tool-name">PICK</span><span class="tool-cost">2 CR</span><span class="tool-count" id="count3">×1</span></div>
+    </div>
+
+    <div id="keys">WASD / ARROWS MOVE &nbsp;·&nbsp; SHIFT SNEAK &nbsp;·&nbsp; E USE / GRAB &nbsp;·&nbsp; 1 2 3 TOOLS</div>
+    <div id="banner" class="hidden"></div>
+    <div id="toast" class="hidden"></div>
+  </div>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
